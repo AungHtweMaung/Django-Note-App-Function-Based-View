@@ -1,0 +1,44 @@
+{% extends 'layout/base.html' %}
+
+{% load static %}
+
+{% block title %}Signup{% endblock title %}
+
+{% block content %}
+    <section class="dashboard" style="padding: 100px 50px;" >
+        <div class="container">
+            <div class="row mb-5 justify-content-center">
+                <div class="col-md-8 p-0 shadow">
+                    <div class="dashboard-title p-4 d-flex justify-content-around" style="background-color: #f4f4f4;">
+                        <h2>My Notes</h2>
+                        <div class="dashboard-create-btn">
+                            <a href="{% url 'create_note' %}" class="btn btn-primary p-2">Create Note</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for note in notes %}
+                <div class="col-lg-4 col-md-6 col-12 mb-3" >
+                   <div class="p-4 shadow-sm" style="background-color: #62ec80">
+                        <h4>{{ note.title }}</h4>
+                        <p>{{ note.text|slice:"25" }} ...</p>
+                        <div class="note-btn d-inline-block " style="background-color: #9e579d">
+                            <a href="{% url 'note_detail' note.id %}" class="btn btn-sm text-white shadow-none">View</a>
+                        </div>
+                   </div>
+                </div>
+                {% empty %}
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 col-12 mb-3" >
+                        <div class="p-4 shadow-sm" style="background-color: #62ec80">
+                            <h3>No Note yet!</h3>
+                            <p class="fw-bold">Create Some Fun Note.</p>
+                        </div>
+                     </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock content %}

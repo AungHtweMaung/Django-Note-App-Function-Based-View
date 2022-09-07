@@ -1,0 +1,244 @@
+/* Generator  */
+
+/* 
+Color I used
+pink => #fc85ae
+purple => #9e579d
+blue purple => #574b90
+dark => #574b90
+white => #574b90
+black => #574b90
+gray => #f4f4f4
+green => #62ec80
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+}
+
+
+/* ****** nav ********** */
+.navbar {
+    z-index: 99999;
+}
+
+.dropdown-toggle::after {
+    color: #fff;
+    font-size: 25px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+/* ****** header ********** */
+#home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.home-content {
+    background-color: #574b90;
+    color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+#home-img {
+    display: flex;
+    justify-content: center;
+}
+
+#home-img img {
+    width: auto;
+    height: 500px;
+}
+
+/************ signup ************** */
+.signup-content {
+    max-width: 400px;
+    background-color: #574b90;
+    border-radius: 25px;
+    color: #fff;
+    padding: 30px 40px;
+    margin: 100px 0px 50px 0px;
+}
+
+.signup-btn input {
+    background-color: #fc85ae;
+    width: 100%;
+    outline: none;
+    border: 0;
+    padding: 15px;
+    font-weight: 600;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.signup-btn input:hover,
+.signup-btn input:focus {
+    background-color: #fc85ae;
+    color: #000;
+}
+
+
+.line p {
+    border: 2px solid #fff;
+    display: inline-block;
+    padding: 3px 5px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social ul {
+    list-style-type: none;
+    display: flex;
+    
+}
+
+.social ul li {
+    margin-right: 30px;
+}
+
+.social ul li a i {
+    font-size: 2em;
+    transition: all 0.4s;
+}
+
+.social ul li a i.fb:hover {
+    color: #284dc8;
+}
+
+.social ul li a i.google:hover {
+    color: #da1258;
+}
+
+.social ul li a i.twitter:hover {
+    color: #4fdded;
+}
+
+
+/************ Login ************** */
+
+.login-content {
+    max-width: 400px;
+    background-color: #574b90;
+    border-radius: 25px;
+    color: #fff;
+    padding: 30px 40px;
+    margin: 100px 0px 50px 0px;
+}
+
+.login-btn input {
+    background-color: #fc85ae;
+    width: 100%;
+    outline: none;
+    border: 0;
+    padding: 15px;
+    font-weight: 600;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.login-btn input:hover,
+.login-btn input:focus {
+    background-color: #fc85ae;
+    color: #000;
+}
+
+.forgot-password a {
+    color: #fff;
+    text-decoration: none;
+    /* margin-top: 5px; */
+    /* text-align: end; */
+}
+
+.line p {
+    border: 2px solid #fff;
+    display: inline-block;
+    padding: 3px 5px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social ul {
+    list-style-type: none;
+    display: flex;
+    
+}
+
+.social ul li {
+    margin-right: 30px;
+}
+
+.social ul li a i {
+    font-size: 2em;
+    transition: all 0.4s;
+}
+
+.social ul li a i.fb:hover {
+    color: #284dc8;
+}
+
+.social ul li a i.google:hover {
+    color: #da1258;
+}
+
+.social ul li a i.twitter:hover {
+    color: #4fdded;
+}
+
+/************ dashboard ************** */
+.dashboard-title h2 {
+    border-bottom: 3px solid #574b90;
+    border-radius: 5px;
+    color: #574b90;
+    display: inline-block;
+
+}
+
+
+/************ Responsive ************** */
+@media screen and (max-width: 768px) {
+    .home-content {
+        margin-top: 250px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .home-content {
+        margin-top: 300px;
+    }
+}
+
+
+
+
+

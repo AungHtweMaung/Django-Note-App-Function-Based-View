@@ -1,0 +1,32 @@
+{% extends 'layout/base.html' %}
+
+{% load static %}
+
+{% block title %}Signup{% endblock title %}
+
+{% block content %}
+    <section style="padding: 100px 50px;" >
+        <div class="container">
+            <div class="row">
+                <div class="note-card d-flex justify-content-center">
+                    <div class="col-md-7">
+                        <div class="card" style="background-color: #62ec80">
+                            <div class="card-body">
+                                <h3>{{ note.title }}</h3>
+                                <p class="fs-5 fw-bold">{{ note.text }}</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="{% url 'dashboard' %}" class="btn btn-secondary btn-sm">Back</a>
+                                <a href="{% url 'edit_note' note.id %}" class="btn btn-sm btn-success">Edit</a>
+                                <a href="#" onclick="delete_note(this)" note-title="{{ note.title }}" class="btn btn-sm btn-danger">Delete</a>
+                                <form method="post" id="delete_form"  action="{% url 'delete_note' note.id %}">
+                                    {% csrf_token %}
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

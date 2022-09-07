@@ -1,0 +1,67 @@
+{% extends 'layout/base.html' %}
+
+{% load static %}
+
+{% block title %}Login{% endblock title %}
+
+{% block content %}
+
+<div class="container ">
+    <div class="row p-3 justify-content-center align-items-center">
+        <div class="login-content">
+            <h3 class="mb-3 fs-2 text-center">Login</h3>
+            {% if error %}
+                <p class="fw-bold" style="color: #fc85ae;">{{ error }}</p>
+            {% endif %}
+            <div class="login-form">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="login-gp mb-2">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" name="username" class="form-control shadow-none" id="username">
+                    </div>
+                    <div class="login-gp mb-2">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" name="password" class="form-control shadow-none" id="password">
+                    </div>
+                    <div class="login-gp mb-3 d-flex align-items-center">
+                        <input type="checkbox" id="remember" class="me-2">
+                        <label for='remember'>Remember me?</label>
+                    </div>
+                    <div class="login-btn mb-1">
+                        <input type="submit" value="Login" class="btn">
+                    </div>
+                    <div class="forgot-password text-end">
+                        <a href="">Forgot Password?</a>
+                    </div>
+                    <div class="line d-flex justify-content-center mt-3">
+                        <p>OR</p>
+                    </div>
+
+                    <div class="social">
+                        <ul>
+                            <li>
+                                <a href="" class="text-white"><i class="fa-brands fa-facebook-f fb"></i></a>
+                            </li>
+                            <li>
+                                <a href="" class="text-white"><i class="fa-brands fa-google-plus-g google"></i></a>
+                            </li>
+                            <li>
+                                <a href="" class="text-white"><i class="fa-brands fa-twitter twitter"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <p>Need an account? <a href="" class="text-white text-decoration-none border-bottom border-1">SIGN UP</a> </p>
+                    </div>
+
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}
+

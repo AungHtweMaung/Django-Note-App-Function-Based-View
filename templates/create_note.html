@@ -1,0 +1,35 @@
+{% extends 'layout/base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Create Note{% endblock title %}
+
+{% block content %}
+    <section class="create" style="padding: 100px 50px;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-align-items-start mt-3">
+                                <h2 class="border-bottom border-3 pb-3 mb-3 d-inline-block">Create Note</h2>
+                                <div>
+                                    <a href="{% url 'create_category' %}" class='btn btn-primary p-3'>Create Category</a>
+                                </div>
+                            </div>
+                            <form action="" method="post">
+                                {% csrf_token %}
+                                {{form|crispy}}
+        
+                                <input type="submit" value="Create" class="btn btn-primary mb-3">
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
